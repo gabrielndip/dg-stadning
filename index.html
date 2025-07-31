@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&G Städning - Professionell städning i Skåne</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="D&G Städning erbjuder professionell och pålitlig städning för hem och företag i hela Skåne län. Få en kostnadsfri offert idag!">
+    <meta name="keywords" content="hemstädning, kontorsstädning, flyttstädning, fönsterputs, städfirma, Skåne, Malmö, Lund, Helsingborg">
+    <meta name="author" content="D&G Städning">
+
+    <!-- Social Media Meta Tags (Open Graph) -->
+    <meta property="og:title" content="D&G Städning - Professionell städning i Skåne">
+    <meta property="og:description" content="Pålitlig och miljövänlig städservice för privatpersoner och företag.">
+    <meta property="og:image" content="https://placehold.co/1200x630/a3b18a/ffffff?text=D%26G+St%C3%A4dning">
+    <meta property="og:url" content="https://www.dgstadning.se">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Styles & Tailwind Config -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom color palette */
+        .bg-sage-light { background-color: #f0f3f0; }
+        .bg-sage-medium { background-color: #a3b18a; }
+        .text-sage-dark { color: #344e41; }
+        .bg-soft-blue { background-color: #dde8f0; }
+        .text-soft-blue-dark { color: #3a506b; }
+        .bg-accent-red { background-color: #c94c4c; }
+        .hover\:bg-accent-red-dark:hover { background-color: #b33e3e; }
+        .border-accent-red { border-color: #c94c4c; }
+
+        /* Hide English text by default */
+        [lang="en"] { display: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-sage-dark">D&G Städning</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#hem" class="text-gray-600 hover:text-sage-dark transition duration-300">Hem</a>
+                <a href="#om-oss" class="text-gray-600 hover:text-sage-dark transition duration-300">Om Oss</a>
+                <a href="#tjanster" class="text-gray-600 hover:text-sage-dark transition duration-300">Tjänster</a>
+                <a href="#kontakt" class="text-gray-600 hover:text-sage-dark transition duration-300">Kontakt</a>
+                <button id="lang-switcher" class="text-sm px-3 py-1 border rounded-full hover:bg-gray-100 transition">English</button>
+            </div>
+             <a href="#kontakt" class="hidden md:inline-block bg-accent-red text-white font-bold py-2 px-5 rounded-full hover:bg-accent-red-dark transition duration-300">Få offert idag</a>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-sage-dark focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4">
+            <a href="#hem" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-sage-light">Hem</a>
+            <a href="#om-oss" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-sage-light">Om Oss</a>
+            <a href="#tjanster" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-sage-light">Tjänster</a>
+            <a href="#kontakt" class="block text-center py-2 px-4 text-sm text-gray-600 hover:bg-sage-light">Kontakt</a>
+            <div class="text-center mt-2">
+                 <button id="lang-switcher-mobile" class="text-sm px-3 py-1 border rounded-full hover:bg-gray-100 transition">English</button>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#kontakt" class="bg-accent-red text-white font-bold py-2 px-5 rounded-full hover:bg-accent-red-dark transition duration-300">Få offert idag</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="hem" class="bg-sage-light">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-sage-dark leading-tight" lang="sv">Professionell städning för hem och företag</h1>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-sage-dark leading-tight" lang="en">Professional cleaning for homes and businesses</h1>
+                
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto" lang="sv">Pålitlig, miljövänlig och försäkrad städservice i hela Skåne. Vi ger dig mer tid till det du älskar.</p>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto" lang="en">Reliable, eco-friendly, and insured cleaning services throughout Skåne. We give you more time for what you love.</p>
+                
+                <a href="#kontakt" class="mt-8 inline-block bg-accent-red text-white font-bold text-lg py-3 px-8 rounded-full hover:bg-accent-red-dark transition-transform transform hover:scale-105 duration-300">
+                    <span lang="sv">Få offert idag</span>
+                    <span lang="en">Get a Quote Today</span>
+                </a>
+                <p class="mt-4 text-sm text-gray-500" lang="sv">6 år i branschen - din trygghet!</p>
+                <p class="mt-4 text-sm text-gray-500" lang="en">6 years in business - your security!</p>
+            </div>
+            
+            <!-- Value Proposition -->
+            <div class="bg-white py-16">
+                <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                    <div class="p-6">
+                        <i class="fas fa-shield-alt text-4xl text-sage-medium"></i>
+                        <h3 class="font-bold text-xl mt-4 text-sage-dark" lang="sv">Pålitlig & Försäkrad</h3>
+                        <h3 class="font-bold text-xl mt-4 text-sage-dark" lang="en">Reliable & Insured</h3>
+                        <p class="mt-2 text-gray-600" lang="sv">Vår personal är kontrollerad och vi har full ansvarsförsäkring för din trygghet.</p>
+                        <p class="mt-2 text-gray-600" lang="en">Our staff is background-checked and we are fully insured for your peace of mind.</p>
+                    </div>
+                    <div class="p-6">
+                        <i class="fas fa-leaf text-4xl text-sage-medium"></i>
+                        <h3 class="font-bold text-xl mt-4 text-sage-dark" lang="sv">Miljövänliga Produkter</h3>
+                        <h3 class="font-bold text-xl mt-4 text-sage-dark" lang="en">Eco-Friendly Products</h3>
+                        <p class="mt-2 text-gray-600" lang="sv">Vi använder effektiva och skonsamma rengöringsmedel som är bra för dig och planeten.</p>
+                        <p class="mt-2 text-gray-600" lang="en">We use effective and gentle cleaning products that are good for you and the planet.</p>
+                    </div>
+                    <div class="p-6">
+                        <i class="fas fa-star text-4xl text-sage-medium"></i>
+                        <h3 class="font-bold text-xl mt-4 text-sage-dark" lang="sv">100% Nöjdhetsgaranti</h3>
+                        <h3 class="font-bold text-xl mt-4 text-sage-dark" lang="en">100% Satisfaction Guarantee</h3>
+                        <p class="mt-2 text-gray-600" lang="sv">Är du inte helt nöjd? Vi kommer tillbaka och åtgärdar det, helt kostnadsfritt.</p>
+                        <p class="mt-2 text-gray-600" lang="en">Not completely satisfied? We'll come back and fix it, completely free of charge.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="om-oss" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-sage-dark" lang="sv">Vår historia</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-sage-dark" lang="en">Our Story</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto" lang="sv">D&G Städning grundades med en enkel idé: att erbjuda en städtjänst man kan lita på.</p>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto" lang="en">D&G Städning was founded with a simple idea: to offer a cleaning service you can trust.</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/a3b18a/ffffff?text=V%C3%A5rt+Team" alt="D&G Städning team" class="rounded-lg shadow-lg w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold text-sage-dark" lang="sv">Kvalitet och förtroende i varje svep</h3>
+                        <h3 class="text-2xl font-semibold text-sage-dark" lang="en">Quality and trust in every sweep</h3>
+                        <p class="mt-4 text-gray-700" lang="sv">Från vår start för sex år sedan har vårt mål varit att leverera skinande rena resultat med personlig service. Vi är ett lokalt team baserat i Skåne som brinner för att göra vardagen enklare för våra kunder. Vår mission är att bygga långsiktiga relationer baserade på kvalitet, pålitlighet och öppen kommunikation.</p>
+                        <p class="mt-4 text-gray-700" lang="en">Since our start six years ago, our goal has been to deliver sparkling clean results with personal service. We are a local team based in Skåne passionate about making everyday life easier for our clients. Our mission is to build long-term relationships based on quality, reliability, and open communication.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="tjanster" class="bg-soft-blue py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-soft-blue-dark" lang="sv">Våra Tjänster</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-soft-blue-dark" lang="en">Our Services</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto" lang="sv">Skräddarsydda städlösningar för alla behov.</p>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto" lang="en">Customized cleaning solutions for every need.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1: Hemstädning -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col">
+                        <i class="fas fa-home text-3xl text-sage-medium mb-4"></i>
+                        <h3 class="text-2xl font-bold text-sage-dark" lang="sv">Hemstädning</h3>
+                        <h3 class="text-2xl font-bold text-sage-dark" lang="en">Home Cleaning</h3>
+                        <p class="mt-2 text-gray-600 flex-grow" lang="sv">Regelbunden städning, storstädning eller flyttstädning. Vi anpassar oss efter ditt hem och dina önskemål.</p>
+                        <p class="mt-2 text-gray-600 flex-grow" lang="en">Regular cleaning, deep cleaning, or move-out cleaning. We adapt to your home and your wishes.</p>
+                        <a href="#kontakt" class="mt-6 self-start bg-gray-200 text-sage-dark font-semibold py-2 px-4 rounded-full hover:bg-sage-medium hover:text-white transition duration-300">
+                           <span lang="sv">Boka nu</span>
+                           <span lang="en">Book Now</span>
+                        </a>
+                    </div>
+                    <!-- Service Card 2: Kontorsstädning -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col">
+                        <i class="fas fa-building text-3xl text-sage-medium mb-4"></i>
+                        <h3 class="text-2xl font-bold text-sage-dark" lang="sv">Kontorsstädning</h3>
+                        <h3 class="text-2xl font-bold text-sage-dark" lang="en">Office Cleaning</h3>
+                        <p class="mt-2 text-gray-600 flex-grow" lang="sv">En ren och fräsch arbetsplats ökar trivseln och produktiviteten. Vi städar kontor och kommersiella lokaler.</p>
+                        <p class="mt-2 text-gray-600 flex-grow" lang="en">A clean and fresh workplace increases well-being and productivity. We clean offices and commercial spaces.</p>
+                        <a href="#kontakt" class="mt-6 self-start bg-gray-200 text-sage-dark font-semibold py-2 px-4 rounded-full hover:bg-sage-medium hover:text-white transition duration-300">
+                           <span lang="sv">Boka nu</span>
+                           <span lang="en">Book Now</span>
+                        </a>
+                    </div>
+                    <!-- Service Card 3: Specialtjänster -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col">
+                        <i class="fas fa-broom text-3xl text-sage-medium mb-4"></i>
+                        <h3 class="text-2xl font-bold text-sage-dark" lang="sv">Specialtjänster</h3>
+                        <h3 class="text-2xl font-bold text-sage-dark" lang="en">Special Services</h3>
+                        <p class="mt-2 text-gray-600 flex-grow" lang="sv">Behöver du fönsterputs, byggstädning eller annan specialiserad städning? Vi har expertisen.</p>
+                        <p class="mt-2 text-gray-600 flex-grow" lang="en">Need window cleaning, post-construction cleanup, or other specialized cleaning? We have the expertise.</p>
+                        <a href="#kontakt" class="mt-6 self-start bg-gray-200 text-sage-dark font-semibold py-2 px-4 rounded-full hover:bg-sage-medium hover:text-white transition duration-300">
+                           <span lang="sv">Boka nu</span>
+                           <span lang="en">Book Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontakt" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-sage-dark" lang="sv">Kontakta Oss</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-sage-dark" lang="en">Contact Us</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto" lang="sv">Fyll i formuläret för en kostnadsfri offert, eller ring oss direkt!</p>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto" lang="en">Fill out the form for a free quote, or call us directly!</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-12">
+                    <!-- Contact Form -->
+                    <div class="md:w-2/3 bg-gray-50 p-8 rounded-lg shadow-md">
+                        <form id="contact-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700" lang="sv">Namn</label>
+                                    <label for="name" class="block text-sm font-medium text-gray-700" lang="en">Name</label>
+                                    <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-sage-medium focus:border-sage-medium">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                    <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-sage-medium focus:border-sage-medium">
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <label for="service-type" class="block text-sm font-medium text-gray-700" lang="sv">Typ av tjänst</label>
+                                <label for="service-type" class="block text-sm font-medium text-gray-700" lang="en">Type of Service</label>
+                                <select id="service-type" name="service-type" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-sage-medium focus:border-sage-medium">
+                                    <option lang="sv">Välj en tjänst...</option>
+                                    <option lang="en">Select a service...</option>
+                                    <option lang="sv">Hemstädning</option>
+                                    <option lang="en">Home Cleaning</option>
+                                    <option lang="sv">Kontorsstädning</option>
+                                    <option lang="en">Office Cleaning</option>
+                                    <option lang="sv">Flyttstädning</option>
+                                    <option lang="en">Move-out Cleaning</option>
+                                    <option lang="sv">Fönsterputs</option>
+                                    <option lang="en">Window Cleaning</option>
+                                    <option lang="sv">Annat</option>
+                                    <option lang="en">Other</option>
+                                </select>
+                            </div>
+                            <div class="mt-6">
+                                <label for="message" class="block text-sm font-medium text-gray-700" lang="sv">Meddelande</label>
+                                <label for="message" class="block text-sm font-medium text-gray-700" lang="en">Message</label>
+                                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-sage-medium focus:border-sage-medium" placeholder-sv="Beskriv vad du behöver hjälp med..." placeholder-en="Describe what you need help with..."></textarea>
+                            </div>
+                            <div class="mt-6">
+                                <button type="submit" class="w-full bg-accent-red text-white font-bold py-3 px-6 rounded-full hover:bg-accent-red-dark transition duration-300">
+                                    <span lang="sv">Skicka förfrågan</span>
+                                    <span lang="en">Send Request</span>
+                                </button>
+                            </div>
+                            <div id="form-success-message" class="hidden mt-4 text-center text-green-700 bg-green-100 p-3 rounded-md">
+                                <p lang="sv">Tack för ditt meddelande! Vi återkommer till dig inom kort.</p>
+                                <p lang="en">Thank you for your message! We will get back to you shortly.</p>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="md:w-1/3">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl font-semibold text-sage-dark" lang="sv">Kontaktuppgifter</h3>
+                                <h3 class="text-xl font-semibold text-sage-dark" lang="en">Contact Information</h3>
+                                <p class="mt-2 text-gray-600"><i class="fas fa-phone mr-2 text-sage-medium"></i> <a href="tel:040-123-456" class="hover:underline">040-123 456</a></p>
+                                <p class="mt-1 text-gray-600"><i class="fas fa-envelope mr-2 text-sage-medium"></i> <a href="mailto:kontakt@dgstadning.se" class="hover:underline">kontakt@dgstadning.se</a></p>
+                                <p class="mt-1 text-gray-600"><i class="fab fa-whatsapp mr-2 text-sage-medium"></i> <a href="https://wa.me/46701234567" target="_blank" class="hover:underline">Chatta på WhatsApp</a></p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-sage-dark" lang="sv">Öppettider</h3>
+                                <h3 class="text-xl font-semibold text-sage-dark" lang="en">Business Hours</h3>
+                                <p class="mt-2 text-gray-600" lang="sv">Mån-Fre: 08:00 - 17:00</p>
+                                <p class="mt-2 text-gray-600" lang="en">Mon-Fri: 08:00 - 17:00</p>
+                                <p class="mt-1 text-gray-600" lang="sv">Helger: Stängt</p>
+                                <p class="mt-1 text-gray-600" lang="en">Weekends: Closed</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-sage-dark" lang="sv">Följ oss</h3>
+                                <h3 class="text-xl font-semibold text-sage-dark" lang="en">Follow Us</h3>
+                                <div class="mt-2 flex space-x-4 text-2xl">
+                                    <a href="#" class="text-gray-500 hover:text-sage-dark"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" class="text-gray-500 hover:text-sage-dark"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="text-gray-500 hover:text-sage-dark"><i class="fab fa-tiktok"></i></a>
+                                    <a href="#" class="text-gray-500 hover:text-sage-dark"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sage-dark text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="font-bold text-lg mb-4">D&G Städning</h4>
+                    <p class="text-sm text-gray-300" lang="sv">Professionell städning i Skåne län.</p>
+                    <p class="text-sm text-gray-300" lang="en">Professional cleaning in Skåne County.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4" lang="sv">Snabblänkar</h4>
+                    <h4 class="font-bold text-lg mb-4" lang="en">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#om-oss" class="text-gray-300 hover:text-white">Om Oss</a></li>
+                        <li><a href="#tjanster" class="text-gray-300 hover:text-white">Tjänster</a></li>
+                        <li><a href="#kontakt" class="text-gray-300 hover:text-white">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4" lang="sv">Kontakt</h4>
+                    <h4 class="font-bold text-lg mb-4" lang="en">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>Email: kontakt@dgstadning.se</li>
+                        <li>Telefon: 040-123 456</li>
+                        <li lang="sv">Huvudkontor: Malmö, Skåne</li>
+                        <li lang="en">Head Office: Malmö, Skåne</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4" lang="sv">Information</h4>
+                    <h4 class="font-bold text-lg mb-4" lang="en">Information</h4>
+                     <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-300 hover:text-white" lang="sv">Integritetspolicy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white" lang="en">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white" lang="sv">Allmänna villkor</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white" lang="en">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+                <p>&copy; <span id="current-year"></span> D&G Städning AB. Alla rättigheter förbehållna.</p>
+                <p class="mt-1">Org.nr: 556XXX-XXXX</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+            for (let link of mobileMenuLinks) {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            }
+
+            // Contact form submission
+            const contactForm = document.getElementById('contact-form');
+            const successMessage = document.getElementById('form-success-message');
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent actual form submission
+                // In a real application, you would send the data to a server here.
+                // For this demo, we'll just show a success message.
+                contactForm.reset();
+                successMessage.classList.remove('hidden');
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000); // Hide message after 5 seconds
+            });
+            
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Language Switcher Logic
+            const langSwitchers = [document.getElementById('lang-switcher'), document.getElementById('lang-switcher-mobile')];
+            let currentLang = 'sv';
+
+            const svElements = document.querySelectorAll('[lang="sv"]');
+            const enElements = document.querySelectorAll('[lang="en"]');
+            const placeholderSv = document.querySelector('[placeholder-sv]');
+
+            function updateLanguage(lang) {
+                if (lang === 'en') {
+                    svElements.forEach(el => el.style.display = 'none');
+                    enElements.forEach(el => el.style.display = 'block');
+                    if(placeholderSv) placeholderSv.placeholder = placeholderSv.getAttribute('placeholder-en');
+                    langSwitchers.forEach(btn => btn.textContent = 'Svenska');
+                    currentLang = 'en';
+                } else {
+                    enElements.forEach(el => el.style.display = 'none');
+                    svElements.forEach(el => el.style.display = 'block');
+                    if(placeholderSv) placeholderSv.placeholder = placeholderSv.getAttribute('placeholder-sv');
+                    langSwitchers.forEach(btn => btn.textContent = 'English');
+                    currentLang = 'sv';
+                }
+                 // Fix for elements that should be inline-block or other display types
+                document.querySelectorAll('span[lang], a[lang] > span[lang]').forEach(el => {
+                    if (el.lang === currentLang) {
+                        el.style.display = 'inline';
+                    } else {
+                         el.style.display = 'none';
+                    }
+                });
+            }
+
+            langSwitchers.forEach(switcher => {
+                switcher.addEventListener('click', () => {
+                    updateLanguage(currentLang === 'sv' ? 'en' : 'sv');
+                });
+            });
+
+            // Initial setup to ensure correct display properties
+             updateLanguage('sv');
+        });
+    </script>
+
+</body>
+</html>
