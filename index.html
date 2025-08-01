@@ -426,8 +426,9 @@
                     };
 
                     try {
-                        const response = await fetch('/api/contact', {
+                        const response = await fetch('https://script.google.com/macros/s/AKfycbwamYDLp98RdkWDdBlOFPw6nVEs4SkEOwRJfPzL0GCdbC5RRoSagu8To7cGHvMOfXzz/exec', {
                             method: 'POST',
+                            mode: 'no-cors', // This mode is required for Google Scripts, but we won't get a response back
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify(data),
                         });
