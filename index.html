@@ -16,7 +16,6 @@
     <meta property="og:image" content="https://placehold.co/1200x630/a3b18a/ffffff?text=D%26G+St%C3%A4dning">
     <meta property="og:url" content="https://www.dgstadning.se">
     <meta property="og:type" content="website">
-    <meta name="google-site-verification" content="ySauSP7EQQUyRTMTH9vQcUzMzNGyT05vztQOu9giqfU" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -347,43 +346,28 @@
     </footer>
 
     <script>
+        // This listener waits for the entire HTML document to be loaded before running the script.
+        // This prevents errors where the script tries to find an element that doesn't exist yet.
         document.addEventListener('DOMContentLoaded', function () {
-            // Mobile menu toggle
+            
+            // --- Mobile menu logic ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Close mobile menu when a link is clicked
-            const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-            for (let link of mobileMenuLinks) {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
                 });
+                const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+                for (let link of mobileMenuLinks) {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                }
             }
 
-            // Contact form submission
-            const contactForm = document.getElementById('contact-form');
-            const successMessage = document.getElementById('form-success-message');
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault(); // Prevent actual form submission
-                // In a real application, you would send the data to a server here.
-                // For this demo, we'll just show a success message.
-                contactForm.reset();
-                successMessage.classList.remove('hidden');
-                setTimeout(() => {
-                    successMessage.classList.add('hidden');
-                }, 5000); // Hide message after 5 seconds
-            });
-            
-            // Set current year in footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-
-            // Language Switcher Logic
+            // --- Language switcher logic ---
             const langSwitchers = [document.getElementById('lang-switcher'), document.getElementById('lang-switcher-mobile')];
             let currentLang = 'sv';
-
             const svElements = document.querySelectorAll('[lang="sv"]');
             const enElements = document.querySelectorAll('[lang="en"]');
             const placeholderSv = document.querySelector('[placeholder-sv]');
@@ -393,16 +377,15 @@
                     svElements.forEach(el => el.style.display = 'none');
                     enElements.forEach(el => el.style.display = 'block');
                     if(placeholderSv) placeholderSv.placeholder = placeholderSv.getAttribute('placeholder-en');
-                    langSwitchers.forEach(btn => btn.textContent = 'Svenska');
+                    langSwitchers.forEach(btn => { if(btn) btn.textContent = 'Svenska' });
                     currentLang = 'en';
                 } else {
                     enElements.forEach(el => el.style.display = 'none');
                     svElements.forEach(el => el.style.display = 'block');
                     if(placeholderSv) placeholderSv.placeholder = placeholderSv.getAttribute('placeholder-sv');
-                    langSwitchers.forEach(btn => btn.textContent = 'English');
+                    langSwitchers.forEach(btn => { if(btn) btn.textContent = 'English' });
                     currentLang = 'sv';
                 }
-                 // Fix for elements that should be inline-block or other display types
                 document.querySelectorAll('span[lang], a[lang] > span[lang]').forEach(el => {
                     if (el.lang === currentLang) {
                         el.style.display = 'inline';
@@ -411,15 +394,67 @@
                     }
                 });
             }
-
             langSwitchers.forEach(switcher => {
-                switcher.addEventListener('click', () => {
-                    updateLanguage(currentLang === 'sv' ? 'en' : 'sv');
-                });
+                if (switcher) {
+                    switcher.addEventListener('click', () => {
+                        updateLanguage(currentLang === 'sv' ? 'en' : 'sv');
+                    });
+                }
             });
+            updateLanguage('sv'); // Set initial language
 
-            // Initial setup to ensure correct display properties
-             updateLanguage('sv');
+            // --- Contact form submission logic ---
+            const contactForm = document.getElementById('contact-form');
+            const successMessage = document.getElementById('form-success-message');
+            
+            if (contactForm) {
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+
+                contactForm.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    
+                    const originalButtonHTML = submitButton.innerHTML;
+                    submitButton.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Skickar...`;
+                    submitButton.disabled = true;
+
+                    const formData = new FormData(contactForm);
+                    const data = {
+                        name: formData.get('name'),
+                        email: formData.get('email'),
+                        serviceType: formData.get('service-type'),
+                        message: formData.get('message'),
+                    };
+
+                    try {
+                        const response = await fetch('/api/contact', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data),
+                        });
+
+                        if (response.ok) {
+                            contactForm.reset();
+                            successMessage.classList.remove('hidden');
+                            setTimeout(() => { successMessage.classList.add('hidden'); }, 5000);
+                        } else {
+                            const errorResult = await response.json();
+                            alert(`Ett fel uppstod: ${errorResult.error || 'Försök igen senare.'}`);
+                        }
+                    } catch (error) {
+                        console.error('Fetch Error:', error);
+                        alert('Kunde inte skicka meddelandet. Kontrollera din internetanslutning.');
+                    } finally {
+                        submitButton.innerHTML = originalButtonHTML;
+                        submitButton.disabled = false;
+                    }
+                });
+            }
+
+            // --- Footer year logic ---
+            const yearSpan = document.getElementById('current-year');
+            if(yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
         });
     </script>
 
